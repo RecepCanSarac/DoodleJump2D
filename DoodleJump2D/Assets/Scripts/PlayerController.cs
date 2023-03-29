@@ -35,11 +35,5 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontalMove * speed * Time.deltaTime,rb.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("platform"))
-        {
-            rb.AddForce(transform.up * Force);
-        }
-    }
+ 
 }

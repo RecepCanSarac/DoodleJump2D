@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlatformManager : MonoBehaviour
 {
+
+    public float Force;
+    private Vector2 playerMove;
+    private Rigidbody2D rb;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
+        if (rb != null)
+        {
+            playerMove = rb.velocity;
+            playerMove.y = Force;
+            rb.velocity = playerMove;
         }
     }
 }
