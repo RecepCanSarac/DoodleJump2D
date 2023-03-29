@@ -10,6 +10,9 @@ public class PlatformManager : MonoBehaviour
     private Rigidbody2D rb;
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if (collision.relativeVelocity.y <= 0)
+        {
         rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
         if (rb != null)
@@ -18,5 +21,8 @@ public class PlatformManager : MonoBehaviour
             playerMove.y = Force;
             rb.velocity = playerMove;
         }
+        }
+
+
     }
 }
