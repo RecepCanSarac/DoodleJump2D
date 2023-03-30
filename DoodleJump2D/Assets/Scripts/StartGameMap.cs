@@ -12,7 +12,7 @@ public class StartGameMap : MonoBehaviour
         for (int i = 0; i < platformNum; i++)
         {
             float randomX = Random.Range(-3,4);
-            float randomY = Random.Range(5,100);
+            float randomY = Random.Range(2,100);
             Instantiate(_platform,new Vector3(randomX,randomY,0f),Quaternion.identity);
         }
     }
