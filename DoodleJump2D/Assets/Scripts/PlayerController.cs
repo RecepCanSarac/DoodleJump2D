@@ -34,16 +34,6 @@ public class PlayerController : MonoBehaviour
         float horizontalMove = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalMove * speed * Time.deltaTime,rb.velocity.y);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("rightWall"))
-        {
-            transform.position = new Vector2(4.5f,transform.position.y);
-        }
-        if (collision.gameObject.CompareTag("leftWall"))
-        {
-            transform.position = new Vector2(-5f, transform.position.y);
-        }
-    }
+   
 
 }
