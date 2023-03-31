@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool lookRight = true;
     SpriteRenderer spriteRenderer;
+    public static int skor;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,4 +51,6 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
+
+  
 }

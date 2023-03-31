@@ -20,6 +20,7 @@ public class PlatformManager : MonoBehaviour
             playerMove = rb.velocity;
             playerMove.y = Force;
             rb.velocity = playerMove;
+            PlayerController.skor += 12;
         }
         }
 
